@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { AmmoraDataApiClient } from "@ammora-protocol/sdk";
 
 const CHAIN_ID = 91_342n; // GIWA Sepolia testnet
-const client = new AmmoraDataApiClient("https://ammora-giwa-sepolia-data.fly.dev");
+const client = new AmmoraDataApiClient(window.location.origin + "/ammora-api");
 
 // Shape of a launch is not fully documented, so we read fields defensively.
 type Launch = Record<string, unknown>;
